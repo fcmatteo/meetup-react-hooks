@@ -1,0 +1,9 @@
+{
+  "short_name": "HQ Trivia Clone",
+  "name": "HQ Trivia Clone",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#36399a",
+  "background_color": "#36399a"
+}
