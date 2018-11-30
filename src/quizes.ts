@@ -74,7 +74,56 @@ export const reactHooks: Quiz = {
 };
 
 export const webAccessibility: Quiz = {
-  questions: [],
+  questions: [
+    {
+      answer: 0,
+      answerOptions: [
+        'Web Content Accessibility Guidelines',
+        'Web Content Authoring Guidelines',
+        'Water Closet Audit Group',
+      ],
+      description:
+        'Web Content Accessibility Guidelines. Web “content” generally refers to the information in a web page or web application, including: natural information such as text, images, and sounds, code or markup that defines structure, presentation, etc.',
+      text: 'What does WCAG stand for?',
+    },
+    {
+      answer: 2,
+      answerOptions: [
+        'Accessible Rich Interactive Applications',
+        'Aspiring Rowdy Interstellar Aliens',
+        'Accessible Rich Internet Applications',
+      ],
+      description:
+        'Accessible Rich Internet Applications. WAI-ARIA defines a way to make Web content and Web applications more accessible to people with disabilities. It especially helps with dynamic content and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.',
+      text: 'What does ARIA of WIA-ARIA stand for?',
+    },
+    {
+      answer: 2,
+      answerOptions: ['$5.25', '$200,000.03', '$6,000,000,000'],
+      description:
+        'The global market of people with disabilities is over 1 billion people with a spending power of more than $6 trillion.',
+      text:
+        'What is the spending power of the over 1 billion people with disabilities?',
+    },
+    {
+      answer: 1,
+      answerOptions: [
+        'NVDA - NonVisual Desktop Access',
+        'VoiceOver ',
+        'JAWS - Job Access With Speech',
+      ],
+      description:
+        'VoiceOver is an integrated screen reader on Apple devices. NVDA and JAWS only work on Windows.',
+      text: 'Which of the following screen readers works on Mac?',
+    },
+    {
+      answer: 0,
+      answerOptions: ['7:1', '3:1', '4.5:1'],
+      description:
+        'VoiceOver is an integrated screen reader on Apple devices. NVDA and JAWS only work on Windows.',
+      text: 'What contrast ratio does AAA require for normal text?',
+    },
+  ],
   title: 'Web Accessibility',
 };
 
