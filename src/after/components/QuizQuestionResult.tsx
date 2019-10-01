@@ -22,6 +22,18 @@ const Title = styled(Text).attrs({
     props.isCorrect ? props.theme.success : props.theme.failure};
 `;
 
+const ValueIcon = styled.img`
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
+`;
+
+const ValueTitle = styled.h1`
+  text-align: center;
+`;
+
 export const QuizQuestionResult: React.SFC<QuizQuestionResultProps> = ({
   currentQuestion,
   selectedAnswerIndex,
@@ -37,6 +49,8 @@ export const QuizQuestionResult: React.SFC<QuizQuestionResultProps> = ({
       <Title isCorrect={isCorrect}>
         {isCorrect ? 'Correct!' : 'Incorrect'}
       </Title>
+      <ValueIcon src={currentQuestion.value.icon} />
+      <ValueTitle>{currentQuestion.value.label}</ValueTitle>
       {!isCorrect && (
         <Text as="div" align="center" mb={1}>
           <Text mb={1 / 2}>The correct answer was:</Text>

@@ -23,6 +23,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.brand};
+    background-color: ${props => props.theme.bg};
   }
 `;

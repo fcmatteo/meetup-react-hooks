@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { App } from './after/App';
-import { App } from './before/App';
+import { App } from './after/App';
+// import { App } from './before/App';
 import { GlobalStyles } from './common/styles/GlobalStyles';
 import { styled, ThemeProvider } from './common/styles/styled';
 import { theme } from './common/styles/theme';
