@@ -8,7 +8,7 @@ interface QuizProps {
   onExit(): void;
 }
 
-const SECONDS_TO_ANSWER = 3;
+const SECONDS_TO_ANSWER = 10;
 
 export const Quiz: React.SFC<QuizProps> = ({ quiz, onExit }) => {
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number>(null);
@@ -33,6 +33,7 @@ export const Quiz: React.SFC<QuizProps> = ({ quiz, onExit }) => {
 
   const handleSelectAnswer = useCallback((answer: number) => {
     setSelectedAnswerIndex(answer);
+    setSecondsLeftToAnswer(0);
   }, []);
 
   useEffect(
