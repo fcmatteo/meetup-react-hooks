@@ -26,6 +26,11 @@ export const Quiz: React.SFC<QuizProps> = ({ quiz, onExit }) => {
     [currentQuestionIndex]
   );
 
+  const handleTryAgain = () => {
+    setSelectedAnswerIndex(null);
+    setSecondsLeftToAnswer(SECONDS_TO_ANSWER);
+  };
+
   const handleSelectAnswer = useCallback((answer: number) => {
     setSelectedAnswerIndex(answer);
   }, []);
@@ -52,6 +57,7 @@ export const Quiz: React.SFC<QuizProps> = ({ quiz, onExit }) => {
         currentQuestion={currentQuestion}
         hasNexQuestion={hasNexQuestion}
         onExit={onExit}
+        onTryAgain={handleTryAgain}
         onNextQuestion={handleNextQuestion}
         selectedAnswerIndex={selectedAnswerIndex}
       />

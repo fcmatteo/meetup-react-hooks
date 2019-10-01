@@ -30,20 +30,12 @@ export const QuizList: React.SFC<QuizListProps> = ({
 }) => (
   <Card>
     <Text size={1.5} mb={1} align="center">
-      Select a quiz
+      Auth0 Values Triva
     </Text>
     <List>
-      {availableQuizes.map((quiz, index) => (
-        <ListItem key={index}>
-          <Button
-            fullWidth
-            onClick={() => onSelectQuiz(quiz)}
-            disabled={!quiz.questions.length}
-          >
-            {quiz.title} ({quiz.questions.length})
-          </Button>
-        </ListItem>
-      ))}
+      <Button fullWidth onClick={() => onSelectQuiz(availableQuizes[0])}>
+        Start Quiz
+      </Button>
     </List>
   </Card>
 );

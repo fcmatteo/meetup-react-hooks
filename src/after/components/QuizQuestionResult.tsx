@@ -11,6 +11,7 @@ export interface QuizQuestionResultProps {
   hasNexQuestion: boolean;
   onNextQuestion(): void;
   onExit(): void;
+  onTryAgain(): void;
 }
 
 const Title = styled(Text).attrs({
@@ -40,9 +41,10 @@ export const QuizQuestionResult: React.SFC<QuizQuestionResultProps> = ({
   onNextQuestion,
   hasNexQuestion,
   onExit,
+  onTryAgain,
 }) => {
   const isCorrect = currentQuestion.answer === selectedAnswerIndex;
-  const correctAnswer = currentQuestion.answerOptions[currentQuestion.answer];
+  // const correctAnswer = currentQuestion.answerOptions[currentQuestion.answer];
 
   return (
     <Card>
@@ -53,24 +55,30 @@ export const QuizQuestionResult: React.SFC<QuizQuestionResultProps> = ({
       <ValueTitle>{currentQuestion.value.label}</ValueTitle>
       {!isCorrect && (
         <Text as="div" align="center" mb={1}>
-          <Text mb={1 / 2}>The correct answer was:</Text>
-          <Text weight={500} size={1.25}>
+          <Text mb={1 / 2}>Seriously?</Text>
+          {/* <Text weight={500} size={1.25}>
             {correctAnswer}
-          </Text>
+          </Text> */}
         </Text>
       )}
-      {Boolean(currentQuestion.description) && (
+      {/* {Boolean(currentQuestion.description) && (
         <Text color="secondary" align="center" mb={1}>
           {currentQuestion.description}
         </Text>
-      )}
+      )} */}
       <CardActions>
         <Button onClick={onExit} fullWidth>
           Exit Quiz
         </Button>
-        {hasNexQuestion && isCorrect && (
-          <Button fullWidth onClick={onNextQuestion} variant="primary">
-            Next Question
+        {isCorrect ? (
+          hasNexQuestion && (
+            <Button fullWidth onClick={onNextQuestion} variant="primary">
+              Next Question
+            </Button>
+          )
+        ) : (
+          <Button fullWidth onClick={onTryAgain} variant="primary">
+            Try Again
           </Button>
         )}
       </CardActions>

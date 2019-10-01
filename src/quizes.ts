@@ -66,6 +66,20 @@ export const auth0ValuesQuiz: Quiz = {
         'Another team is reaching out requesting your insight on a particular problem they are working on, What would be the Auth0 way of assisting?',
       value: auth0Values.oneTeam,
     },
+    {
+      answer: 2,
+      answerOptions: [
+        'Laugh at them.',
+        'Point and laugh at them.',
+        'Contribute beyond your own area of responsibility when you can.',
+        'Leave the room, pointing and laughing.',
+      ],
+      description:
+        'Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in an open RFC.',
+      text:
+        'Another team is reaching out requesting your insight on a particular problem they are working on, What would be the Auth0 way of assisting?',
+      value: auth0Values.oneTeam,
+    },
   ],
   title: 'Auth0 Values',
 };
