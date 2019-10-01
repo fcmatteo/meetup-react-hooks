@@ -19,6 +19,10 @@ module.exports = () => ({
         test: /\.(png)/,
         use: 'file-loader',
       },
+      {
+        test: /\.(svg)/,
+        use: 'file-loader',
+      },
     ],
   },
   plugins: [
