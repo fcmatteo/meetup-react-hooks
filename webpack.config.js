@@ -15,6 +15,10 @@ module.exports = () => ({
         test: /\.tsx?$/,
         use: 'ts-loader',
       },
+      {
+        test: /\.(png)/,
+        use: 'file-loader',
+      },
     ],
   },
   plugins: [

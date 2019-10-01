@@ -1,3 +1,7 @@
+import oneTeamIcon from './images/value_collaboration_XL.png';
+import nPlusOneIcon from './images/value_learn_XL.png';
+import giveAShitIcon from './images/value_passionate_XL.png';
+
 export interface Question {
   text: string;
   answer: number;
@@ -48,18 +52,15 @@ type Values = 'giveAShit' | 'nPlus1' | 'oneTeam';
 export const auth0Values: Record<Values, Auth0Value> = {
   giveAShit: {
     label: 'We Give a Shit',
-    icon:
-      'https://api.media.atlassian.com/file/ec3a828e-5e91-4691-97cd-1dd4f8b386c3/image?mode=full-fit&client=077a8a9b-de53-46c4-be67-6d1d4ddde489&token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIwNzdhOGE5Yi1kZTUzLTQ2YzQtYmU2Ny02ZDFkNGRkZGU0ODkiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpmaWxlOmVjM2E4MjhlLTVlOTEtNDY5MS05N2NkLTFkZDRmOGIzODZjMyI6WyJyZWFkIl19LCJleHAiOjE1Njk5NTM3MDQsIm5iZiI6MTU2OTk1MDM0NH0.jsREQVpQBrfIDJxoElbWq6kL6sHdYGytzKG43vgACck',
+    icon: giveAShitIcon,
   },
   nPlus1: {
     label: 'N + 1 > N',
-    icon:
-      'https://api.media.atlassian.com/file/79ef679d-10ef-4fcc-9483-604452926fae/image?mode=full-fit&client=077a8a9b-de53-46c4-be67-6d1d4ddde489&token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIwNzdhOGE5Yi1kZTUzLTQ2YzQtYmU2Ny02ZDFkNGRkZGU0ODkiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpmaWxlOjc5ZWY2NzlkLTEwZWYtNGZjYy05NDgzLTYwNDQ1MjkyNmZhZSI6WyJyZWFkIl19LCJleHAiOjE1Njk5NTM3NTEsIm5iZiI6MTU2OTk1MDM5MX0.5v0xVYtqau6ZgFU4DJFlcOvnzhH3fwAar8Hhp-TAg30',
+    icon: nPlusOneIcon,
   },
   oneTeam: {
     label: 'One Team, One Score',
-    icon:
-      'https://api.media.atlassian.com/file/162ce290-fd06-4d08-85f5-961b5f9d0809/image?mode=full-fit&client=077a8a9b-de53-46c4-be67-6d1d4ddde489&token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIwNzdhOGE5Yi1kZTUzLTQ2YzQtYmU2Ny02ZDFkNGRkZGU0ODkiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpmaWxlOjE2MmNlMjkwLWZkMDYtNGQwOC04NWY1LTk2MWI1ZjlkMDgwOSI6WyJyZWFkIl19LCJleHAiOjE1Njk5NTM4NDIsIm5iZiI6MTU2OTk1MDQ4Mn0.DEJqGtxpLYYoP5fecAvkrs2jRfdACWsrr9hvdNSabqo',
+    icon: oneTeamIcon,
   },
 };
 
